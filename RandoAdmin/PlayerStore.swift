@@ -7,34 +7,30 @@ protocol PlayerStoreDelegate {
 class PlayerStore {
     var delegate: PlayerStoreDelegate?
     var players = [Player]()
+    var router: Router
     
-    func update() {
-        let path = "https://rando-pool.herokuapp.com/api/current_characters"
-        guard let url = NSURL(string: path) else { return }
-        let request = NSURLRequest(URL: url)
-        NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: parseData).resume()
+    init(router: Router = ApiRouter()) {
+        self.router = router
     }
     
-    func parseData(data: NSData?, response: NSURLResponse?, error: NSError?) {
-        do {
-            guard let data = data else { print("OMG"); return }
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
-            
-            if let playersJSON = json as? [[String: AnyObject]] {
-                for playerJSON in playersJSON {
-                    if let id = playerJSON["id"] as? Int, let name = playerJSON["player_name"] as? String {
-                        let player = Player(id: id, name: name)
-                        players.append(player)
-                    }
-                }
-                
-                dispatch_async(dispatch_get_main_queue()) {
-                    self.delegate?.didUpdatePlayers()
+    func update() {
+        router.get(.Players, completion: parsePlayersJSON)
+    }
+    
+    func parsePlayersJSON(response: Response) {
+        guard let json = response.json where response.isSuccess else { return }
+        
+        if let playersJSON = json as? [[String: AnyObject]] {
+            for playerJSON in playersJSON {
+                if let id = playerJSON["id"] as? Int, let name = playerJSON["player_name"] as? String {
+                    let player = Player(id: id, name: name)
+                    players.append(player)
                 }
             }
-        } catch {
-            print(error)
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.delegate?.didUpdatePlayers()
+            }
         }
-        
     }
 }
