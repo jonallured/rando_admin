@@ -28,12 +28,15 @@ class PlayerStore {
     
     private func parseJSON(json: JSON) {
         if let playersJSON = json as? [[String: AnyObject]] {
-            for playerJSON in playersJSON {
-                if let id = playerJSON["id"] as? Int, let name = playerJSON["player_name"] as? String {
-                    let player = Player(id: id, name: name)
-                    players.append(player)
-                }
+            typealias PlayerAttributes = (id: Int, name: String)
+            
+            let attributes: [PlayerAttributes?] = playersJSON.map { playerJSON in
+                guard let id = playerJSON["id"] as? Int,
+                    let name = playerJSON["player_name"] as? String else { return nil }
+                return (id, name)
             }
+            
+            players = attributes.flatMap({ $0 }).map { Player(id: $0.id, name: $0.name) }
         }
     }
 }

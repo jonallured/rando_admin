@@ -10,9 +10,10 @@ class PlayersController: UITableViewController {
     override func viewDidLoad() {
         tableView.delegate = self
         tableView.dataSource = self
-        
         store.delegate = self
-        store.update()
+        
+        refreshControl?.addTarget(self, action: "refreshPlayers", forControlEvents: .ValueChanged)
+        refreshPlayers()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -24,10 +25,18 @@ class PlayersController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
     }
+    
+    func refreshPlayers() {
+        store.update()
+    }
 }
 
 extension PlayersController: PlayerStoreDelegate {
     func didUpdatePlayers() {
+        if let refresh = refreshControl where refresh.refreshing {
+            refresh.endRefreshing()
+        }
+        
         tableView.reloadData()
     }
 }

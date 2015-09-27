@@ -13,6 +13,13 @@ class PlayerStoreTests: XCTestCase {
         XCTAssertEqual(store.players.count, 3)
     }
     
+    func testUpdateReplacesPlayers() {
+        let store = PlayerStore(router: FakeRouter())
+        store.update()
+        store.update()
+        XCTAssertEqual(store.players.count, 3)
+    }
+    
     func testUpdateSkipsBadJSON() {
         let router = FakeRouter()
         router.json = [
