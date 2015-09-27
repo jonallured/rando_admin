@@ -19,6 +19,7 @@
 		FCE35FB61BADF540000590A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE35FB41BADF540000590A8 /* LaunchScreen.storyboard */; };
 		FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE35FC01BADF540000590A8 /* PlayerStoreTests.swift */; };
 		FCE35FCC1BADF69C000590A8 /* PlayersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE35FCB1BADF69C000590A8 /* PlayersController.swift */; };
+		FCE82DBA1BB6F1E700909C2C /* FakeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE82DB91BB6F1E700909C2C /* FakeRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		FCE35FC01BADF540000590A8 /* PlayerStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStoreTests.swift; sourceTree = "<group>"; };
 		FCE35FC21BADF540000590A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE35FCB1BADF69C000590A8 /* PlayersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersController.swift; sourceTree = "<group>"; };
+		FCE82DB91BB6F1E700909C2C /* FakeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		FCB1D42D1BB6EE2E00F12402 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				FCE82DB91BB6F1E700909C2C /* FakeRouter.swift */,
 				FCE35FC21BADF540000590A8 /* Info.plist */,
 			);
 			name = Support;
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */,
+				FCE82DBA1BB6F1E700909C2C /* FakeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
