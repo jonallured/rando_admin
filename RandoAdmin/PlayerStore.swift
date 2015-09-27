@@ -14,22 +14,25 @@ class PlayerStore {
     }
     
     func update() {
-        router.get(.Players, completion: parsePlayersJSON)
+        router.get(.Players, completion: handleResponse)
     }
     
-    func parsePlayersJSON(response: Response) {
+    func handleResponse(response: Response) {
         guard let json = response.json where response.isSuccess else { return }
+        parseJSON(json)
         
+        dispatch_async(dispatch_get_main_queue()) {
+            self.delegate?.didUpdatePlayers()
+        }
+    }
+    
+    private func parseJSON(json: JSON) {
         if let playersJSON = json as? [[String: AnyObject]] {
             for playerJSON in playersJSON {
                 if let id = playerJSON["id"] as? Int, let name = playerJSON["player_name"] as? String {
                     let player = Player(id: id, name: name)
                     players.append(player)
                 }
-            }
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                self.delegate?.didUpdatePlayers()
             }
         }
     }
