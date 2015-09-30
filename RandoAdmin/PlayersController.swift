@@ -8,6 +8,8 @@ class PlayersController: UITableViewController {
   }
 
   override func viewDidLoad() {
+    super.viewDidLoad()
+
     store.delegate = self
     refreshControl?.addTarget(self, action: "refreshPlayers", forControlEvents: .ValueChanged)
     refreshPlayers()
