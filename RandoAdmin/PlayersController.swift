@@ -26,6 +26,16 @@ class PlayersController: UITableViewController {
     return players.count
   }
 
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    guard let
+      picksController = segue.destinationViewController as? PicksController,
+      indexPath = tableView.indexPathForSelectedRow
+      where segue.id == .ShowPicks else { return }
+
+    let player = players[indexPath.row]
+    picksController.player = player
+  }
+
   func refreshPlayers() {
     store.update()
   }

@@ -6,6 +6,10 @@ class TeamStore {
   var teams = [Team]()
   var router: Router
 
+  class func withId(id: Int) -> Team {
+    return sharedInstance.teams.filter({ $0.id == id }).first!
+  }
+
   init(router: Router = ApiRouter()) {
     self.router = router
   }
