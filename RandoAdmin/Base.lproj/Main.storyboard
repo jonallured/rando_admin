@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vab-sh-8Fh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XFR-vV-30A">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
     </dependencies>
@@ -43,7 +43,53 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s5p-mK-ECb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="327"/>
+            <point key="canvasLocation" x="553" y="327"/>
+        </scene>
+        <!--Loading Controller-->
+        <scene sceneID="aSK-1q-WWV">
+            <objects>
+                <viewController id="XFR-vV-30A" customClass="LoadingController" customModule="RandoAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="167-cP-JFF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vsg-CT-Ztd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6FW-Ui-F33">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rando Admin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQW-N9-0xb">
+                                <rect key="frame" x="249" y="219.5" width="102" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GTl-us-SWm">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GTl-us-SWm" firstAttribute="top" secondItem="LQW-N9-0xb" secondAttribute="bottom" constant="50" id="1iv-uW-5Rh"/>
+                            <constraint firstItem="LQW-N9-0xb" firstAttribute="centerX" secondItem="6FW-Ui-F33" secondAttribute="centerX" id="UL6-9n-csL"/>
+                            <constraint firstItem="LQW-N9-0xb" firstAttribute="centerY" secondItem="6FW-Ui-F33" secondAttribute="centerY" id="YTQ-wc-L82"/>
+                            <constraint firstItem="GTl-us-SWm" firstAttribute="centerX" secondItem="6FW-Ui-F33" secondAttribute="centerX" id="e7b-BH-px2"/>
+                            <constraint firstItem="LQW-N9-0xb" firstAttribute="centerX" secondItem="6FW-Ui-F33" secondAttribute="centerX" id="oEJ-6q-E9F"/>
+                            <constraint firstItem="GTl-us-SWm" firstAttribute="centerY" secondItem="6FW-Ui-F33" secondAttribute="centerY" id="s0L-GW-I3P"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UL6-9n-csL"/>
+                                <exclude reference="YTQ-wc-L82"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="vab-sh-8Fh" kind="show" identifier="ShowPlayers" id="2rn-9j-02W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s96-0Y-m1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="327"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qpT-ws-Zyj">

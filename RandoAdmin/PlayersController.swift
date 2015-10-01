@@ -1,7 +1,11 @@
 import UIKit
 
 class PlayersController: UITableViewController {
-  let store = PlayerStore()
+  var store: PlayerStore! {
+    didSet {
+      store.delegate = self
+    }
+  }
 
   var players: [Player] {
     return store.players
@@ -9,10 +13,7 @@ class PlayersController: UITableViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    store.delegate = self
     refreshControl?.addTarget(self, action: "refreshPlayers", forControlEvents: .ValueChanged)
-    refreshPlayers()
   }
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
