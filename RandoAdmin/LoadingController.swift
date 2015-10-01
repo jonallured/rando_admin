@@ -5,9 +5,8 @@ class LoadingController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    store.delegate = self
-    store.update()
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("teamStoreUpdated"), name: "TeamStoreDidUpdate", object: TeamStore.sharedInstance)
+    TeamStore.sharedInstance.update()
   }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -19,6 +18,11 @@ class LoadingController: UIViewController {
     }
 
     playersController.store = store
+  }
+
+  func teamStoreUpdated() {
+    store.delegate = self
+    store.update()
   }
 }
 
