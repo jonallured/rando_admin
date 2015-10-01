@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B41BBCA66200F95CA6 /* LoadingController.swift */; };
+		FC8134B71BBCB27800F95CA6 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */; };
 		FCB1D4221BB6E93A00F12402 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4211BB6E93A00F12402 /* Player.swift */; };
 		FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4231BB6E96900F12402 /* PlayerStore.swift */; };
 		FCB1D4261BB6ED3D00F12402 /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4251BB6ED3D00F12402 /* ApiRouter.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		FC8134B41BBCA66200F95CA6 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		FCB1D4211BB6E93A00F12402 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCB1D4231BB6E96900F12402 /* PlayerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStore.swift; sourceTree = "<group>"; };
 		FCB1D4251BB6ED3D00F12402 /* ApiRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				FCE35FAB1BADF540000590A8 /* AppDelegate.swift */,
 				FCE35FB21BADF540000590A8 /* Assets.xcassets */,
 				FCE35FB71BADF540000590A8 /* Info.plist */,
+				FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */,
 				FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */,
+				FC8134B71BBCB27800F95CA6 /* SegueIdentifier.swift in Sources */,
 				FCE35FCC1BADF69C000590A8 /* PlayersController.swift in Sources */,
 				FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */,
 				FCB1D4281BB6ED5D00F12402 /* Request.swift in Sources */,

@@ -14,7 +14,7 @@ class LoadingController: UIViewController {
     guard let
       navController = segue.destinationViewController as? UINavigationController,
       playersController = navController.topViewController as? PlayersController
-      where segue.identifier == "ShowPlayers" else {
+      where segue.identifier == SegueIdentifier.ShowPlayers.rawValue else {
         return
     }
 
@@ -24,6 +24,6 @@ class LoadingController: UIViewController {
 
 extension LoadingController: PlayerStoreDelegate {
   func didUpdatePlayers() {
-    performSegueWithIdentifier("ShowPlayers", sender: self)
+    performSegueWithIdentifier(SegueIdentifier.ShowPlayers.rawValue, sender: self)
   }
 }
