@@ -25,11 +25,14 @@ class PickBuilder {
   func handleResponse(response: Response) {
     guard let
       json = response.json,
-      picksJSON = json as? [[String: AnyObject]]
+      picksJSON = json as? [JSON]
       where response.code == 201 else { return }
 
-    let pickAttributes = JSONParser.picks(picksJSON)
-    let picks = pickAttributes.map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
-    self.delegate?.didFinishCreating(picks)
+    let attributes = JSONParser.picks(picksJSON)
+    let picks = attributes.map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
+
+    dispatch_async(dispatch_get_main_queue()) {
+      self.delegate?.didFinishCreating(picks)
+    }
   }
 }
