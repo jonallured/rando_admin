@@ -3,6 +3,7 @@ import UIKit
 class AddPickController: UIViewController {
   let builder = PickBuilder()
   var player: Player!
+  var selectedTeam: Team?
 
   var teams: [Team] {
     return TeamStore.sharedInstance.teams
@@ -11,8 +12,7 @@ class AddPickController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
   @IBAction func saveButtonPressed(sender: AnyObject) {
-    guard let indexPath = tableView.indexPathForSelectedRow else { return }
-    let team = teams[indexPath.row]
+    guard let team = selectedTeam else { return }
     builder.create(player, team: team)
   }
 
@@ -27,7 +27,13 @@ class AddPickController: UIViewController {
 extension AddPickController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Team", forIndexPath: indexPath)
-    cell.textLabel?.text = teams[indexPath.row].name
+    let team = teams[indexPath.row]
+    cell.textLabel?.text = team.name
+
+    if let selectedTeam = selectedTeam {
+      cell.accessoryType = team == selectedTeam ? .Checkmark : .None
+    }
+
     return cell
   }
 
@@ -36,7 +42,22 @@ extension AddPickController: UITableViewDataSource {
   }
 }
 
-extension AddPickController: UITableViewDelegate {}
+extension AddPickController: UITableViewDelegate {
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    var indexPaths = [indexPath]
+
+    if let
+      selectedTeam = selectedTeam,
+      selectedIndex = teams.indexOf(selectedTeam) {
+        indexPaths.append(NSIndexPath(forRow: selectedIndex, inSection: 0))
+    }
+
+    selectedTeam = teams[indexPath.row]
+
+    tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    tableView.selectRowAtIndexPath(nil, animated: true, scrollPosition: .None)
+  }
+}
 
 extension AddPickController: PickBuilderDelegate {
   func didFinishCreating(picks: [Pick]) {
