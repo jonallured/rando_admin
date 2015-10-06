@@ -29,7 +29,6 @@ class PlayerStore {
   private func parseJSON(json: JSON) {
     if let playersJSON = json as? [[String: AnyObject]] {
       typealias PlayerAttributes = (id: Int, name: String, picks: [Pick])
-      typealias PickAttributes = (weekNumber: Int, teamId: Int)
 
       let attributes: [PlayerAttributes?] = playersJSON.map { playerJSON in
         guard let
@@ -38,16 +37,8 @@ class PlayerStore {
           picksJSON = playerJSON["picks"] as? [[String: AnyObject]]
           else { return nil }
 
-        let pickAttributes: [PickAttributes?] = picksJSON.map { pickJSON in
-          guard let
-            week = pickJSON["week_number"] as? Int,
-            teamId = pickJSON["team_id"] as? Int
-            else { return nil }
-
-          return (week, teamId)
-        }
-
-        let picks = pickAttributes.flatMap({ $0 }).map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
+        let pickAttributes = JSONParser.picks(picksJSON)
+        let picks = pickAttributes.map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
         return (id, name, picks)
       }
 
