@@ -18,13 +18,10 @@ class PlayerStore {
   }
 
   func handleResponse(response: Response) {
-    guard let
-      json = response.json,
-      playersJSON = json as? [JSON]
-      where response.isSuccess else { return }
+    guard let json = response.json as? [JSON] where response.isSuccess else { return }
 
-    let attributes = JSONParser.players(playersJSON)
-    players = attributes.map { Player(id: $0.id, name: $0.name, picks: $0.picks) }
+    let attributes = PlayerAttributes.fromJSON(json)
+    players = attributes.map { Player($0) }
 
     dispatch_async(dispatch_get_main_queue()) {
       self.delegate?.didUpdatePlayers()
