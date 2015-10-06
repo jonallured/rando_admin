@@ -1,5 +1,7 @@
 import Foundation
 
+typealias Params = [String: AnyObject]
+
 class Request {
   var path: String
   var completion: (Response) -> Void
@@ -9,6 +11,12 @@ class Request {
     request.get()
   }
 
+  class func post(path: String, params: Params, completion: (Response) -> Void) {
+    let pathWithParams = path + params
+    let request = Request(path: pathWithParams, completion: completion)
+    request.post()
+  }
+
   init(path: String, completion: (Response) -> Void) {
     (self.path, self.completion) = (path, completion)
   }
@@ -16,6 +24,13 @@ class Request {
   func get() {
     guard let url = NSURL(string: path) else { return }
     let request = NSURLRequest(URL: url)
+    NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler).resume()
+  }
+
+  func post() {
+    guard let url = NSURL(string: path) else { return }
+    let request = NSMutableURLRequest(URL: url)
+    request.HTTPMethod = "POST"
     NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler).resume()
   }
 
@@ -37,4 +52,9 @@ class Request {
 
     completion(Response(code: code, json: json))
   }
+}
+
+private func +(path: String, params: Params) -> String {
+  let paramString = params.map({"\($0.0)=\(String($0.1))"}).joinWithSeparator("&")
+  return "\(path)?\(paramString)"
 }

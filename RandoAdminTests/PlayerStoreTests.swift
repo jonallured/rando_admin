@@ -22,7 +22,7 @@ class PlayerStoreTests: XCTestCase {
 
   func testUpdateSkipsBadJSON() {
     let router = FakeRouter()
-    router.json = [
+    router.playerJSON = [
       [ "garbage": true ]
     ]
 
