@@ -3,35 +3,34 @@ import Foundation
 typealias Params = [String: AnyObject]
 
 class Request {
-  var path: String
-  var completion: (Response) -> Void
+  let path: String
+  let method: String
+  let completion: (Response) -> Void
+
+  var task: NSURLSessionDataTask {
+    let url = NSURL(string: path)!
+    let request = NSMutableURLRequest(URL: url)
+    request.HTTPMethod = method
+    return NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler)
+  }
 
   class func get(path: String, completion: (Response) -> Void) {
-    let request = Request(path: path, completion: completion)
-    request.get()
+    let request = Request(path: path, method: "GET", completion: completion)
+    request.resumeTask()
   }
 
   class func post(path: String, params: Params, completion: (Response) -> Void) {
     let pathWithParams = path + params
-    let request = Request(path: pathWithParams, completion: completion)
-    request.post()
+    let request = Request(path: pathWithParams, method: "POST", completion: completion)
+    request.resumeTask()
   }
 
-  init(path: String, completion: (Response) -> Void) {
-    (self.path, self.completion) = (path, completion)
+  init(path: String, method: String, completion: (Response) -> Void) {
+    (self.path, self.method, self.completion) = (path, method, completion)
   }
 
-  func get() {
-    guard let url = NSURL(string: path) else { return }
-    let request = NSURLRequest(URL: url)
-    NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler).resume()
-  }
-
-  func post() {
-    guard let url = NSURL(string: path) else { return }
-    let request = NSMutableURLRequest(URL: url)
-    request.HTTPMethod = "POST"
-    NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler).resume()
+  func resumeTask() {
+    task.resume()
   }
 
   func handler(data: NSData?, response: NSURLResponse?, error: NSError?) {
