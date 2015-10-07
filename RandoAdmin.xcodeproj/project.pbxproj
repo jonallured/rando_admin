@@ -21,8 +21,8 @@
 		FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */; };
 		FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D42B1BB6EDBC00F12402 /* Response.swift */; };
 		FCD19F321BC34721004241C1 /* PickBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F311BC34721004241C1 /* PickBuilder.swift */; };
-		FCD19F341BC401A1004241C1 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F331BC401A1004241C1 /* JSONParser.swift */; };
 		FCD19F361BC44C94004241C1 /* PlayerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */; };
+		FCD19F381BC54E6B004241C1 /* PickAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F371BC54E6B004241C1 /* PickAttributes.swift */; };
 		FCDCFABE1BBC57A400A9A94F /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */; };
 		FCE35FAC1BADF540000590A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE35FAB1BADF540000590A8 /* AppDelegate.swift */; };
 		FCE35FB11BADF540000590A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE35FAF1BADF540000590A8 /* Main.storyboard */; };
@@ -59,8 +59,8 @@
 		FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FCB1D42B1BB6EDBC00F12402 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		FCD19F311BC34721004241C1 /* PickBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickBuilder.swift; sourceTree = "<group>"; };
-		FCD19F331BC401A1004241C1 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAttributes.swift; sourceTree = "<group>"; };
+		FCD19F371BC54E6B004241C1 /* PickAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickAttributes.swift; sourceTree = "<group>"; };
 		FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
 		FCE35FA81BADF540000590A8 /* RandoAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandoAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE35FAB1BADF540000590A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,9 +137,9 @@
 		FCB1D4201BB6E91C00F12402 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FCD19F371BC54E6B004241C1 /* PickAttributes.swift */,
 				FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */,
 				FCD19F311BC34721004241C1 /* PickBuilder.swift */,
-				FCD19F331BC401A1004241C1 /* JSONParser.swift */,
 				FC557F8F1BBCDE8A006FFEFD /* Pick.swift */,
 				FC0F721E1BBC598D00E7DB69 /* Team.swift */,
 				FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */,
@@ -309,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD19F341BC401A1004241C1 /* JSONParser.swift in Sources */,
 				FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */,
 				FCE82DBC1BB8467B00909C2C /* PicksController.swift in Sources */,
 				FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */,
@@ -328,6 +327,7 @@
 				FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */,
 				FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */,
 				FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */,
+				FCD19F381BC54E6B004241C1 /* PickAttributes.swift in Sources */,
 				FCE35FAC1BADF540000590A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

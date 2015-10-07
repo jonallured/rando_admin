@@ -17,7 +17,7 @@ class PlayerAttributes {
         picksJSON = playerJSON["picks"] as? [[String: AnyObject]]
         else { return nil }
 
-      let pickAttributes = JSONParser.picks(picksJSON)
+      let pickAttributes = PickAttributes.fromJSON(picksJSON)
       let picks = pickAttributes.map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
       return PlayerAttributes(id: id, name: name, picks: picks)
     }

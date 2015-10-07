@@ -12,4 +12,8 @@ class Pick {
     self.week = "Week \(weekNumber)"
     self.team = TeamStore.withId(teamId)
   }
+
+  convenience init(_ attributes: PickAttributes) {
+    self.init(weekNumber: attributes.weekNumber, teamId: attributes.teamId)
+  }
 }
