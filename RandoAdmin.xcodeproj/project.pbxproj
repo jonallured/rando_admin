@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F721E1BBC598D00E7DB69 /* Team.swift */; };
+		FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */; };
 		FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F8F1BBCDE8A006FFEFD /* Pick.swift */; };
 		FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F911BBD8B9C006FFEFD /* AddPickController.swift */; };
 		FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B41BBCA66200F95CA6 /* LoadingController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		FC0F721E1BBC598D00E7DB69 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC557F8F1BBCDE8A006FFEFD /* Pick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 		FC557F911BBD8B9C006FFEFD /* AddPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickController.swift; sourceTree = "<group>"; };
 		FC8134B41BBCA66200F95CA6 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		FCB1D41E1BB6E8F900F12402 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */,
 				FC557F911BBD8B9C006FFEFD /* AddPickController.swift */,
 				FC8134B41BBCA66200F95CA6 /* LoadingController.swift */,
 				FCE82DBB1BB8467B00909C2C /* PicksController.swift */,
@@ -327,6 +330,7 @@
 				FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */,
 				FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */,
 				FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */,
+				FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */,
 				FCD19F381BC54E6B004241C1 /* PickAttributes.swift in Sources */,
 				FCE35FAC1BADF540000590A8 /* AppDelegate.swift in Sources */,
 			);

@@ -10,14 +10,8 @@ class LoadingController: UIViewController {
   }
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    guard let
-      navController = segue.destinationViewController as? UINavigationController,
-      playersController = navController.topViewController as? PlayersController
-      where segue.id == .ShowPlayers else {
-        return
-    }
-
-    playersController.store = store
+    guard let tabController = segue.destinationViewController as? TabBarController else { return }
+    tabController.passStore(store)
   }
 
   func teamStoreUpdated() {
@@ -28,6 +22,6 @@ class LoadingController: UIViewController {
 
 extension LoadingController: PlayerStoreDelegate {
   func didUpdatePlayers() {
-    performSegueWithIdentifier(.ShowPlayers, sender: self)
+    performSegueWithIdentifier(.ShowTabBar, sender: self)
   }
 }

@@ -87,12 +87,12 @@
                         </variation>
                     </view>
                     <connections>
-                        <segue destination="vab-sh-8Fh" kind="show" identifier="ShowPlayers" id="2rn-9j-02W"/>
+                        <segue destination="k1b-T4-Y7w" kind="show" identifier="ShowTabBar" id="VAS-PI-x6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s96-0Y-m1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="327"/>
+            <point key="canvasLocation" x="-2083" y="865"/>
         </scene>
         <!--Picks-->
         <scene sceneID="I16-lx-QFj">
@@ -144,6 +144,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-Tg-j48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1257" y="327"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Umy-yg-gbK">
+            <objects>
+                <tabBarController id="k1b-T4-Y7w" customClass="TabBarController" customModule="RandoAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZTm-1a-yWq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vab-sh-8Fh" kind="relationship" relationship="viewControllers" id="8b4-dH-yhz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9d-6K-cdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1353" y="865"/>
         </scene>
         <!--Add Pick Controller-->
         <scene sceneID="Stc-34-dF9">
@@ -221,10 +238,11 @@
             </objects>
             <point key="canvasLocation" x="1952" y="327"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Players-->
         <scene sceneID="qpT-ws-Zyj">
             <objects>
                 <navigationController id="vab-sh-8Fh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Players" id="pRs-k8-yDg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dXb-gX-qx1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
