@@ -1,6 +1,7 @@
 import UIKit
 
 class LoadingController: UIViewController {
+  let rando = Rando()
   let store = PlayerStore()
 
   override func viewDidLoad() {
@@ -11,10 +12,18 @@ class LoadingController: UIViewController {
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     guard let tabController = segue.destinationViewController as? TabBarController else { return }
+    tabController.passRando(rando)
     tabController.passStore(store)
   }
 
   func teamStoreUpdated() {
+    rando.delegate = self
+    rando.update()
+  }
+}
+
+extension LoadingController: RandoDelegate {
+  func didUpdateRando() {
     store.delegate = self
     store.update()
   }

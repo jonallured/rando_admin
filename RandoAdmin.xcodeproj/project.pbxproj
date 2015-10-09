@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F721E1BBC598D00E7DB69 /* Team.swift */; };
 		FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */; };
+		FC4B5AC81BC7F97400893EB6 /* RandoPicksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */; };
 		FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F8F1BBCDE8A006FFEFD /* Pick.swift */; };
 		FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F911BBD8B9C006FFEFD /* AddPickController.swift */; };
 		FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B41BBCA66200F95CA6 /* LoadingController.swift */; };
@@ -25,6 +26,7 @@
 		FCD19F361BC44C94004241C1 /* PlayerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */; };
 		FCD19F381BC54E6B004241C1 /* PickAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F371BC54E6B004241C1 /* PickAttributes.swift */; };
 		FCDCFABE1BBC57A400A9A94F /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */; };
+		FCDE99321BC8390B00CC5B1C /* Rando.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE99311BC8390B00CC5B1C /* Rando.swift */; };
 		FCE35FAC1BADF540000590A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE35FAB1BADF540000590A8 /* AppDelegate.swift */; };
 		FCE35FB11BADF540000590A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE35FAF1BADF540000590A8 /* Main.storyboard */; };
 		FCE35FB31BADF540000590A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE35FB21BADF540000590A8 /* Assets.xcassets */; };
@@ -48,6 +50,7 @@
 /* Begin PBXFileReference section */
 		FC0F721E1BBC598D00E7DB69 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoPicksController.swift; sourceTree = "<group>"; };
 		FC557F8F1BBCDE8A006FFEFD /* Pick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 		FC557F911BBD8B9C006FFEFD /* AddPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickController.swift; sourceTree = "<group>"; };
 		FC8134B41BBCA66200F95CA6 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAttributes.swift; sourceTree = "<group>"; };
 		FCD19F371BC54E6B004241C1 /* PickAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickAttributes.swift; sourceTree = "<group>"; };
 		FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamStore.swift; sourceTree = "<group>"; };
+		FCDE99311BC8390B00CC5B1C /* Rando.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rando.swift; sourceTree = "<group>"; };
 		FCE35FA81BADF540000590A8 /* RandoAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandoAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE35FAB1BADF540000590A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCE35FB01BADF540000590A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */,
+				FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */,
 				FC557F911BBD8B9C006FFEFD /* AddPickController.swift */,
 				FC8134B41BBCA66200F95CA6 /* LoadingController.swift */,
 				FCE82DBB1BB8467B00909C2C /* PicksController.swift */,
@@ -140,6 +145,7 @@
 		FCB1D4201BB6E91C00F12402 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE99311BC8390B00CC5B1C /* Rando.swift */,
 				FCD19F371BC54E6B004241C1 /* PickAttributes.swift */,
 				FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */,
 				FCD19F311BC34721004241C1 /* PickBuilder.swift */,
@@ -315,12 +321,14 @@
 				FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */,
 				FCE82DBC1BB8467B00909C2C /* PicksController.swift in Sources */,
 				FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */,
+				FC4B5AC81BC7F97400893EB6 /* RandoPicksController.swift in Sources */,
 				FC8134B71BBCB27800F95CA6 /* SegueIdentifier.swift in Sources */,
 				FC8134BA1BBCB30100F95CA6 /* UIViewController.swift in Sources */,
 				FCE35FCC1BADF69C000590A8 /* PlayersController.swift in Sources */,
 				FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */,
 				FC8134BC1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift in Sources */,
 				FCD19F321BC34721004241C1 /* PickBuilder.swift in Sources */,
+				FCDE99321BC8390B00CC5B1C /* Rando.swift in Sources */,
 				FCDCFABE1BBC57A400A9A94F /* TeamStore.swift in Sources */,
 				FCB1D4281BB6ED5D00F12402 /* Request.swift in Sources */,
 				FCB1D4221BB6E93A00F12402 /* Player.swift in Sources */,

@@ -8,4 +8,12 @@ class TabBarController: UITabBarController {
 
     playersController.store = store
   }
+
+  func passRando(rando: Rando) {
+    guard let
+      navController = viewControllers?.last as? UINavigationController,
+      randoPicksController = navController.topViewController as? RandoPicksController else { return }
+
+    randoPicksController.rando = rando
+  }
 }
