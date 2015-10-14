@@ -33,6 +33,8 @@
 		FCC065E41BCE844F00B219F4 /* PlayerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */; };
 		FCC065E51BCE847700B219F4 /* PickAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F371BC54E6B004241C1 /* PickAttributes.swift */; };
 		FCC065E61BCE849000B219F4 /* TeamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */; };
+		FCC065E81BCE891D00B219F4 /* PickAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC065E71BCE891D00B219F4 /* PickAttributesTests.swift */; };
+		FCC065EA1BCE8D0D00B219F4 /* PlayerAttributesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC065E91BCE8D0D00B219F4 /* PlayerAttributesTests.swift */; };
 		FCD19F321BC34721004241C1 /* PickBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F311BC34721004241C1 /* PickBuilder.swift */; };
 		FCD19F361BC44C94004241C1 /* PlayerAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */; };
 		FCD19F381BC54E6B004241C1 /* PickAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD19F371BC54E6B004241C1 /* PickAttributes.swift */; };
@@ -75,6 +77,8 @@
 		FCB1D4271BB6ED5D00F12402 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FCB1D42B1BB6EDBC00F12402 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FCC065E71BCE891D00B219F4 /* PickAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickAttributesTests.swift; sourceTree = "<group>"; };
+		FCC065E91BCE8D0D00B219F4 /* PlayerAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAttributesTests.swift; sourceTree = "<group>"; };
 		FCD19F311BC34721004241C1 /* PickBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickBuilder.swift; sourceTree = "<group>"; };
 		FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAttributes.swift; sourceTree = "<group>"; };
 		FCD19F371BC54E6B004241C1 /* PickAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickAttributes.swift; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				FCE35FC01BADF540000590A8 /* PlayerStoreTests.swift */,
+				FCC065E71BCE891D00B219F4 /* PickAttributesTests.swift */,
+				FCC065E91BCE8D0D00B219F4 /* PlayerAttributesTests.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				FCC065DD1BCE839900B219F4 /* Response.swift in Sources */,
 				FCC065E51BCE847700B219F4 /* PickAttributes.swift in Sources */,
 				FCC065DF1BCE83B400B219F4 /* Request.swift in Sources */,
+				FCC065E81BCE891D00B219F4 /* PickAttributesTests.swift in Sources */,
 				FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */,
 				FCC065E01BCE842000B219F4 /* PlayerStore.swift in Sources */,
 				FCC065E11BCE843100B219F4 /* Player.swift in Sources */,
@@ -376,6 +383,7 @@
 				FCC065E31BCE844000B219F4 /* Team.swift in Sources */,
 				FCC065DE1BCE83A000B219F4 /* Endpoint.swift in Sources */,
 				FCC065E61BCE849000B219F4 /* TeamStore.swift in Sources */,
+				FCC065EA1BCE8D0D00B219F4 /* PlayerAttributesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

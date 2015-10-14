@@ -18,7 +18,7 @@ class Rando {
   }
 
   func handleResponse(response: Response) {
-    guard let json = response.json as? [JSON] where response.isSuccess else { return }
+    guard let json = response.json where response.isSuccess else { return }
 
     let attributes = PickAttributes.fromJSON(json)
     picks = attributes.map { Pick($0) }

@@ -23,7 +23,7 @@ class PickBuilder {
   }
 
   func handleResponse(response: Response) {
-    guard let json = response.json as? [JSON] where response.code == 201 else { return }
+    guard let json = response.json where response.code == 201 else { return }
 
     let attributes = PickAttributes.fromJSON(json)
     let picks = attributes.map { Pick($0) }

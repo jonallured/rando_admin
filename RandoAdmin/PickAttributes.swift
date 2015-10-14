@@ -8,8 +8,9 @@ class PickAttributes {
     (self.weekNumber, self.teamId) = (weekNumber, teamId)
   }
 
-  class func fromJSON(json: [JSON]) -> [PickAttributes] {
+  class func fromJSON(json: JSON) -> [PickAttributes] {
     guard let json = json as? [[String: AnyObject]] else { return [] }
+
     let attributes: [PickAttributes?] = json.map { pickJSON in
       guard let
         weekNumber = pickJSON["week_number"] as? Int,

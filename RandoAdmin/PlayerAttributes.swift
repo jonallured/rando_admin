@@ -9,13 +9,14 @@ class PlayerAttributes {
     (self.id, self.name, self.picks) = (id, name, picks)
   }
 
-  class func fromJSON(json: [JSON]) -> [PlayerAttributes] {
+  class func fromJSON(json: JSON) -> [PlayerAttributes] {
     guard let json = json as? [[String: AnyObject]] else { return [] }
+
     let attributes: [PlayerAttributes?] = json.map { playerJSON in
       guard let
         id = playerJSON["id"] as? Int,
         name = playerJSON["player_name"] as? String,
-        picksJSON = playerJSON["picks"] as? [[String: AnyObject]]
+        picksJSON = playerJSON["picks"]
         else { return nil }
 
       let pickAttributes = PickAttributes.fromJSON(picksJSON)

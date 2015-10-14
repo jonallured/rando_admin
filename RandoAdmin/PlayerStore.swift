@@ -18,7 +18,7 @@ class PlayerStore {
   }
 
   func handleResponse(response: Response) {
-    guard let json = response.json as? [JSON] where response.isSuccess else { return }
+    guard let json = response.json where response.isSuccess else { return }
 
     let attributes = PlayerAttributes.fromJSON(json)
     players = attributes.map { Player($0) }
