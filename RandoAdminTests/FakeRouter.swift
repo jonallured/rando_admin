@@ -1,5 +1,9 @@
 import Foundation
-@testable import RandoAdmin
+
+class ProductionRouter: Router {
+  func get(endpoint: Endpoint, completion: (Response) -> Void) {}
+  func post(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {}
+}
 
 class FakeRouter: Router {
   var playerJSON: [[String: AnyObject]] = [
