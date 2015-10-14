@@ -1,8 +1,9 @@
 import Foundation
 
-class ProductionRouter: Router {
-  func get(endpoint: Endpoint, completion: (Response) -> Void) {}
-  func post(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {}
+struct ApiRouter {
+  static var instance: Router {
+    return FakeRouter()
+  }
 }
 
 class FakeRouter: Router {

@@ -9,7 +9,7 @@ class PlayerStore {
   var players = [Player]()
   var router: Router
 
-  init(router: Router = ProductionRouter()) {
+  init(router: Router = ApiRouter.instance) {
     self.router = router
   }
 

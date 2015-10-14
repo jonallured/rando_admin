@@ -10,7 +10,7 @@ class TeamStore {
     return sharedInstance.teams.filter({ $0.id == id }).first!
   }
 
-  init(router: Router = ProductionRouter()) {
+  init(router: Router = ApiRouter.instance) {
     self.router = router
   }
 

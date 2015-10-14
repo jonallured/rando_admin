@@ -1,5 +1,11 @@
 import Foundation
 
+struct ApiRouter {
+  static var instance: Router {
+    return ProductionRouter()
+  }
+}
+
 class ProductionRouter: Router {
   var baseURL = "https://rando-pool.herokuapp.com/api"
 
