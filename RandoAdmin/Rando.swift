@@ -9,7 +9,7 @@ class Rando {
   var picks = [Pick]()
   var router: Router
 
-  init(router: Router = ApiRouter()) {
+  init(router: Router = ProductionRouter()) {
     self.router = router
   }
 

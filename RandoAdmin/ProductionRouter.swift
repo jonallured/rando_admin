@@ -1,11 +1,6 @@
 import Foundation
 
-protocol Router {
-  func get(endpoint: Endpoint, completion: (Response) -> Void)
-  func post(endpoint: Endpoint, params: Params, completion: (Response) -> Void)
-}
-
-class ApiRouter: Router {
+class ProductionRouter: Router {
   var baseURL = "https://rando-pool.herokuapp.com/api"
 
   func get(endpoint: Endpoint, completion: (Response) -> Void) {

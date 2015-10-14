@@ -8,7 +8,7 @@ class PickBuilder {
   var delegate: PickBuilderDelegate?
   var router: Router
 
-  init(router: Router = ApiRouter()) {
+  init(router: Router = ProductionRouter()) {
     self.router = router
   }
 
