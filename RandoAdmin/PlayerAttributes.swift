@@ -10,6 +10,7 @@ class PlayerAttributes {
   }
 
   class func fromJSON(json: [JSON]) -> [PlayerAttributes] {
+    guard let json = json as? [[String: AnyObject]] else { return [] }
     let attributes: [PlayerAttributes?] = json.map { playerJSON in
       guard let
         id = playerJSON["id"] as? Int,

@@ -9,6 +9,7 @@ class PickAttributes {
   }
 
   class func fromJSON(json: [JSON]) -> [PickAttributes] {
+    guard let json = json as? [[String: AnyObject]] else { return [] }
     let attributes: [PickAttributes?] = json.map { pickJSON in
       guard let
         weekNumber = pickJSON["week_number"] as? Int,
