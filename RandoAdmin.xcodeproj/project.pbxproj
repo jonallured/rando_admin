@@ -120,8 +120,8 @@
 		FC8134B81BBCB2E700F95CA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FC8134B91BBCB30100F95CA6 /* UIViewController.swift */,
 				FC8134BB1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift */,
+				FC8134B91BBCB30100F95CA6 /* UIViewController.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -140,12 +140,12 @@
 		FCB1D41E1BB6E8F900F12402 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */,
-				FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */,
 				FC557F911BBD8B9C006FFEFD /* AddPickController.swift */,
 				FC8134B41BBCA66200F95CA6 /* LoadingController.swift */,
 				FCE82DBB1BB8467B00909C2C /* PicksController.swift */,
 				FCE35FCB1BADF69C000590A8 /* PlayersController.swift */,
+				FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */,
+				FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -162,20 +162,13 @@
 		FCB1D4201BB6E91C00F12402 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FCDE99311BC8390B00CC5B1C /* Rando.swift */,
-				FCD19F371BC54E6B004241C1 /* PickAttributes.swift */,
-				FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */,
-				FCD19F311BC34721004241C1 /* PickBuilder.swift */,
 				FC557F8F1BBCDE8A006FFEFD /* Pick.swift */,
-				FC0F721E1BBC598D00E7DB69 /* Team.swift */,
-				FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */,
-				FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */,
-				FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */,
+				FCD19F311BC34721004241C1 /* PickBuilder.swift */,
 				FCB1D4211BB6E93A00F12402 /* Player.swift */,
 				FCB1D4231BB6E96900F12402 /* PlayerStore.swift */,
-				FCB1D4271BB6ED5D00F12402 /* Request.swift */,
-				FCB1D42B1BB6EDBC00F12402 /* Response.swift */,
-				FCFF2B181BCE822700148568 /* Router.swift */,
+				FCDE99311BC8390B00CC5B1C /* Rando.swift */,
+				FC0F721E1BBC598D00E7DB69 /* Team.swift */,
+				FCDCFABD1BBC57A400A9A94F /* TeamStore.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -193,10 +186,38 @@
 			isa = PBXGroup;
 			children = (
 				FCE35FC01BADF540000590A8 /* PlayerStoreTests.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FCC065EB1BCE8F2300B219F4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */,
+				FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */,
+				FCB1D4271BB6ED5D00F12402 /* Request.swift */,
+				FCB1D42B1BB6EDBC00F12402 /* Response.swift */,
+				FCFF2B181BCE822700148568 /* Router.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		FCC065EC1BCE8F6300B219F4 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
+				FCD19F371BC54E6B004241C1 /* PickAttributes.swift */,
+				FCD19F351BC44C94004241C1 /* PlayerAttributes.swift */,
+			);
+			name = Parsing;
+			sourceTree = "<group>";
+		};
+		FCC065ED1BCE903400B219F4 /* Parsing */ = {
+			isa = PBXGroup;
+			children = (
 				FCC065E71BCE891D00B219F4 /* PickAttributesTests.swift */,
 				FCC065E91BCE8D0D00B219F4 /* PlayerAttributesTests.swift */,
 			);
-			name = Models;
+			name = Parsing;
 			sourceTree = "<group>";
 		};
 		FCE35F9F1BADF540000590A8 = {
@@ -220,6 +241,8 @@
 		FCE35FAA1BADF540000590A8 /* RandoAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				FCC065EC1BCE8F6300B219F4 /* Parsing */,
+				FCC065EB1BCE8F2300B219F4 /* Networking */,
 				FC8134B81BBCB2E700F95CA6 /* Extensions */,
 				FCB1D4201BB6E91C00F12402 /* Models */,
 				FCB1D41E1BB6E8F900F12402 /* Controllers */,
@@ -232,6 +255,7 @@
 		FCE35FBF1BADF540000590A8 /* RandoAdminTests */ = {
 			isa = PBXGroup;
 			children = (
+				FCC065ED1BCE903400B219F4 /* Parsing */,
 				FCB1D42E1BB6EE4100F12402 /* Models */,
 				FCB1D42D1BB6EE2E00F12402 /* Support */,
 			);
