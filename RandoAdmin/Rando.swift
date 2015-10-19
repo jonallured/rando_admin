@@ -14,7 +14,7 @@ class Rando {
   }
 
   func update() {
-    router.get(.RandoPicks, completion: handleResponse)
+    router.get(.RandoPicks, params: [:], completion: handleResponse)
   }
 
   func handleResponse(response: Response) {

@@ -14,19 +14,19 @@ class Request {
     return NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: handler)
   }
 
-  class func get(path: String, completion: (Response) -> Void) {
-    let request = Request(path: path, method: "GET", completion: completion)
+  class func get(path: String, params: Params = [:], completion: (Response) -> Void) {
+    let request = Request(path: path, params: params, method: "GET", completion: completion)
     request.resumeTask()
   }
 
   class func post(path: String, params: Params, completion: (Response) -> Void) {
-    let pathWithParams = path + params
-    let request = Request(path: pathWithParams, method: "POST", completion: completion)
+    let request = Request(path: path, params: params, method: "POST", completion: completion)
     request.resumeTask()
   }
 
-  init(path: String, method: String, completion: (Response) -> Void) {
-    (self.path, self.method, self.completion) = (path, method, completion)
+  init(path: String, params: Params, method: String, completion: (Response) -> Void) {
+    self.path = path + params
+    (self.method, self.completion) = (method, completion)
   }
 
   func resumeTask() {

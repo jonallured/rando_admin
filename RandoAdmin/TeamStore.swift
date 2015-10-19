@@ -15,7 +15,7 @@ class TeamStore {
   }
 
   func update() {
-    router.get(.Teams, completion: handleResponse)
+    router.get(.Teams, params: [:], completion: handleResponse)
   }
 
   func handleResponse(response: Response) {

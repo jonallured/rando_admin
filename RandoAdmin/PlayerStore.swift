@@ -14,7 +14,7 @@ class PlayerStore {
   }
 
   func update() {
-    router.get(.Players, completion: handleResponse)
+    router.get(.Players, params: [:], completion: handleResponse)
   }
 
   func handleResponse(response: Response) {

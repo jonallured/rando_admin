@@ -15,7 +15,7 @@ class FakeRouter: Router {
 
   var picksJSON = [[String: AnyObject]]()
 
-  func get(endpoint: Endpoint, completion: (Response) -> Void) {
+  func get(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {
     let response = Response(code: 200, json: playerJSON)
     completion(response)
   }
