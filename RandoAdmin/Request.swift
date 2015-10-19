@@ -42,11 +42,7 @@ class Request {
     }
 
     if let data = data {
-      do {
-        json = try NSJSONSerialization.JSONObjectWithData(data, options: [])
-      } catch {
-        // not sure what to do here...
-      }
+      json = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
     }
 
     completion(Response(code: code, json: json))
