@@ -10,12 +10,20 @@ class ProductionRouter: Router {
   var baseURL = "https://rando-pool.herokuapp.com/api"
 
   func get(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {
-    let path = baseURL + endpoint.rawValue
+    get(endpoint.rawValue, params: params, completion: completion)
+  }
+
+  func get(path: String, params: Params, completion: (Response) -> Void) {
+    let path = baseURL + path
     Request.get(path, params: params, completion: completion)
   }
 
   func post(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {
-    let path = baseURL + endpoint.rawValue
+    post(endpoint.rawValue, params: params, completion: completion)
+  }
+
+  func post(path: String, params: Params, completion: (Response) -> Void) {
+    let path = baseURL + path
     Request.post(path, params: params, completion: completion)
   }
 }

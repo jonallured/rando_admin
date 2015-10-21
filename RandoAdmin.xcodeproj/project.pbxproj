@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F721E1BBC598D00E7DB69 /* Team.swift */; };
+		FC36801C1BD51EF9009E318D /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36801B1BD51EF9009E318D /* EndpointTests.swift */; };
 		FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */; };
 		FC4B5AC81BC7F97400893EB6 /* RandoPicksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */; };
 		FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F8F1BBCDE8A006FFEFD /* Pick.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		FC0F721E1BBC598D00E7DB69 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		FC36801B1BD51EF9009E318D /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoPicksController.swift; sourceTree = "<group>"; };
 		FC557F8F1BBCDE8A006FFEFD /* Pick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC36801A1BD51EE9009E318D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC36801B1BD51EF9009E318D /* EndpointTests.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		FC8134B81BBCB2E700F95CA6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +265,7 @@
 		FCE35FBF1BADF540000590A8 /* RandoAdminTests */ = {
 			isa = PBXGroup;
 			children = (
+				FC36801A1BD51EE9009E318D /* Networking */,
 				FCC065ED1BCE903400B219F4 /* Parsing */,
 				FCB1D42E1BB6EE4100F12402 /* Models */,
 				FCB1D42D1BB6EE2E00F12402 /* Support */,
@@ -395,6 +406,7 @@
 			files = (
 				FCC065DD1BCE839900B219F4 /* Response.swift in Sources */,
 				FCC065E51BCE847700B219F4 /* PickAttributes.swift in Sources */,
+				FC36801C1BD51EF9009E318D /* EndpointTests.swift in Sources */,
 				FCC065DF1BCE83B400B219F4 /* Request.swift in Sources */,
 				FCC065E81BCE891D00B219F4 /* PickAttributesTests.swift in Sources */,
 				FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */,

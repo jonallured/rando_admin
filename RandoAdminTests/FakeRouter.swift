@@ -20,8 +20,12 @@ class FakeRouter: Router {
     completion(response)
   }
 
+  func get(path: String, params: Params, completion: (Response) -> Void) {}
+
   func post(endpoint: Endpoint, params: Params, completion: (Response) -> Void) {
     let response = Response(code: 201, json: picksJSON)
     completion(response)
   }
+
+  func post(path: String, params: Params, completion: (Response) -> Void) {}
 }
