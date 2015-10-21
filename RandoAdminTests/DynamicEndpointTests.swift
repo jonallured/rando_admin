@@ -1,7 +1,7 @@
 import XCTest
 
-class EndpointTests: XCTestCase {
-  func testDynamicEndpointWithBadParams() {
+class DynamicEndpointTests: XCTestCase {
+  func testBadParams() {
     let params: Params = ["key": 1]
     let dynamicEndpoint = DynamicEndpoint(endpoint: .ActiveTeams, params: params)
     let path = dynamicEndpoint.path
@@ -9,7 +9,7 @@ class EndpointTests: XCTestCase {
     XCTAssertNil(path)
   }
 
-  func testDynamicEndpointWithoutPathPart() {
+  func testWithoutPathPart() {
     let params: Params = ["key": "value"]
     let dynamicEndpoint = DynamicEndpoint(endpoint: .ActiveTeams, params: params)
     let path = dynamicEndpoint.path
@@ -17,7 +17,7 @@ class EndpointTests: XCTestCase {
     XCTAssertNil(path)
   }
 
-  func testDynamicEndpointWithPathPart() {
+  func testWithPathPart() {
     let params: Params = ["week_number": "1"]
     let dynamicEndpoint = DynamicEndpoint(endpoint: .ActiveTeams, params: params)
     let path = dynamicEndpoint.path

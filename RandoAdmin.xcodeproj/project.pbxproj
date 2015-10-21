@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F721E1BBC598D00E7DB69 /* Team.swift */; };
-		FC36801C1BD51EF9009E318D /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36801B1BD51EF9009E318D /* EndpointTests.swift */; };
+		FC36801C1BD51EF9009E318D /* DynamicEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36801B1BD51EF9009E318D /* DynamicEndpointTests.swift */; };
+		FC3903DB1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */; };
+		FC3903DC1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */; };
 		FC3C166A1BC86EAE00B27028 /* AddRandoPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C16691BC86EAE00B27028 /* AddRandoPickController.swift */; };
 		FC3C166C1BCA8DDA00B27028 /* RandomPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C166B1BCA8DDA00B27028 /* RandomPick.swift */; };
 		FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */; };
@@ -66,7 +68,8 @@
 
 /* Begin PBXFileReference section */
 		FC0F721E1BBC598D00E7DB69 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		FC36801B1BD51EF9009E318D /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		FC36801B1BD51EF9009E318D /* DynamicEndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEndpointTests.swift; sourceTree = "<group>"; };
+		FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEndpoint.swift; sourceTree = "<group>"; };
 		FC3C16691BC86EAE00B27028 /* AddRandoPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRandoPickController.swift; sourceTree = "<group>"; };
 		FC3C166B1BCA8DDA00B27028 /* RandomPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPick.swift; sourceTree = "<group>"; };
 		FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -126,7 +129,7 @@
 		FC36801A1BD51EE9009E318D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				FC36801B1BD51EF9009E318D /* EndpointTests.swift */,
+				FC36801B1BD51EF9009E318D /* DynamicEndpointTests.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 		FCC065EB1BCE8F2300B219F4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */,
 				FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */,
 				FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */,
 				FCB1D4271BB6ED5D00F12402 /* Request.swift */,
@@ -400,6 +404,7 @@
 				FC3C166C1BCA8DDA00B27028 /* RandomPick.swift in Sources */,
 				FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */,
 				FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */,
+				FC3903DB1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */,
 				FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */,
 				FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */,
 				FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */,
@@ -414,9 +419,10 @@
 			files = (
 				FCC065DD1BCE839900B219F4 /* Response.swift in Sources */,
 				FCC065E51BCE847700B219F4 /* PickAttributes.swift in Sources */,
-				FC36801C1BD51EF9009E318D /* EndpointTests.swift in Sources */,
+				FC36801C1BD51EF9009E318D /* DynamicEndpointTests.swift in Sources */,
 				FCC065DF1BCE83B400B219F4 /* Request.swift in Sources */,
 				FCC065E81BCE891D00B219F4 /* PickAttributesTests.swift in Sources */,
+				FC3903DC1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */,
 				FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */,
 				FCC065E01BCE842000B219F4 /* PlayerStore.swift in Sources */,
 				FCC065E11BCE843100B219F4 /* Player.swift in Sources */,
