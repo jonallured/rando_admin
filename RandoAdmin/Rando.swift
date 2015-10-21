@@ -9,6 +9,10 @@ class Rando {
   var picks = [Pick]()
   var router: Router
 
+  var nextWeekNumber: Int {
+    return picks.count + 1
+  }
+
   init(router: Router = ApiRouter.instance) {
     self.router = router
   }

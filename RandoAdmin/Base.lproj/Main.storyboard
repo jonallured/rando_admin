@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9052" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XFR-vV-30A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9058" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XFR-vV-30A">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
     </dependencies>
     <scenes>
         <!--Players-->
@@ -18,15 +18,15 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j0r-Gb-351" id="Uod-Lr-xMh">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NjN-2M-LuE">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="249" y="219" width="102" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="GTl-us-SWm">
@@ -116,19 +116,19 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MG0-vK-Drr" id="dpA-Z8-Pdi">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Week Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zwj-xq-Yxb">
-                                            <rect key="frame" x="15" y="12" width="103" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="103" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Team Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5S8-12-7hz">
-                                            <rect key="frame" x="498" y="12" width="87" height="20"/>
+                                            <rect key="frame" x="498.5" y="12" width="86.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -157,6 +157,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHT-Tg-j48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1257" y="327"/>
+        </scene>
+        <!--Add Rando Pick Controller-->
+        <scene sceneID="cz2-2O-UsA">
+            <objects>
+                <viewController id="Vuz-dD-CK1" customClass="AddRandoPickController" customModule="RandoAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QRh-iX-QjN"/>
+                        <viewControllerLayoutGuide type="bottom" id="tku-KY-prl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TMU-D7-Xc4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elR-yM-rjm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="CAj-6a-uTF"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Add Rando Pick" id="3jU-D3-ANb">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sgS-YD-1G7">
+                                            <connections>
+                                                <segue destination="5dW-D1-ykX" kind="unwind" unwindAction="unwindToRandoPicksController:" id="CJe-in-3i1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="Jmg-dr-clM">
+                                            <connections>
+                                                <action selector="savePressed:" destination="Vuz-dD-CK1" id="PLq-pQ-wi0"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="072-oe-xc3">
+                                <rect key="frame" x="254" y="290" width="92" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tJ9-LQ-d4z">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="072-oe-xc3" firstAttribute="centerY" secondItem="TMU-D7-Xc4" secondAttribute="centerY" id="GFT-KB-5Jx"/>
+                            <constraint firstAttribute="trailing" secondItem="elR-yM-rjm" secondAttribute="trailing" id="Zfp-Vh-hqI"/>
+                            <constraint firstItem="elR-yM-rjm" firstAttribute="top" secondItem="TMU-D7-Xc4" secondAttribute="top" id="dgR-rf-ARe"/>
+                            <constraint firstItem="tJ9-LQ-d4z" firstAttribute="centerX" secondItem="TMU-D7-Xc4" secondAttribute="centerX" id="i7x-Oj-lJx"/>
+                            <constraint firstItem="elR-yM-rjm" firstAttribute="leading" secondItem="TMU-D7-Xc4" secondAttribute="leading" id="lym-Zy-6UB"/>
+                            <constraint firstItem="elR-yM-rjm" firstAttribute="top" secondItem="QRh-iX-QjN" secondAttribute="bottom" id="nlz-cQ-T4E"/>
+                            <constraint firstItem="tJ9-LQ-d4z" firstAttribute="centerY" secondItem="TMU-D7-Xc4" secondAttribute="centerY" id="qd7-xf-JRa"/>
+                            <constraint firstItem="072-oe-xc3" firstAttribute="centerX" secondItem="TMU-D7-Xc4" secondAttribute="centerX" id="sOi-i2-dfo"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nlz-cQ-T4E"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="tJ9-LQ-d4z" id="xQo-ND-2y0"/>
+                        <outlet property="saveButtonItem" destination="Jmg-dr-clM" id="aQL-jV-5lw"/>
+                        <outlet property="teamNameLabel" destination="072-oe-xc3" id="4c0-hm-X4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b3o-e7-9C7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5dW-D1-ykX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="1169"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Umy-yg-gbK">
@@ -219,15 +293,15 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qu0-7v-J5k" id="JNh-Eg-L6D">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zRU-Kz-OdC">
-                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -291,19 +365,19 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oSY-00-IVv" id="cUq-rb-Vxe">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Week Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7GZ-kd-L3N">
-                                            <rect key="frame" x="15" y="12" width="103" height="20"/>
+                                            <rect key="frame" x="15" y="12" width="103" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Team Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jui-oS-bNr">
-                                            <rect key="frame" x="498" y="12" width="87" height="20"/>
+                                            <rect key="frame" x="498.5" y="12" width="86.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -321,7 +395,13 @@
                             <outlet property="delegate" destination="3Rt-QV-gxm" id="60V-EO-3Vw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Rando's Picks" id="qNy-Rh-kYB"/>
+                    <navigationItem key="navigationItem" title="Rando's Picks" id="qNy-Rh-kYB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gRw-YS-Rxu">
+                            <connections>
+                                <segue destination="Vuz-dD-CK1" kind="showDetail" identifier="AddRandoPick" id="oDT-Lw-qSP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDr-hd-A0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

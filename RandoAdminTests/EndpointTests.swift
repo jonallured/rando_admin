@@ -18,10 +18,10 @@ class EndpointTests: XCTestCase {
   }
 
   func testDynamicEndpointWithPathPart() {
-    let params: Params = ["week_id": "1"]
+    let params: Params = ["week_number": "1"]
     let dynamicEndpoint = DynamicEndpoint(endpoint: .ActiveTeams, params: params)
     let path = dynamicEndpoint.path
 
-    XCTAssertEqual(path, "/current_season/1/active_teams")
+    XCTAssertEqual(path, "/current_season/weeks/1/active_teams")
   }
 }
