@@ -34,7 +34,7 @@ class DynamicEndpoint {
     }
   }
 
-  init(endpoint: Endpoint ,params: Params) {
+  init(endpoint: Endpoint, params: Params) {
     (self.endpoint, self.params) = (endpoint, params)
   }
 }
