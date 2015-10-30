@@ -16,9 +16,22 @@ class PlayersController: UITableViewController {
     refreshControl?.addTarget(self, action: "refreshPlayers", forControlEvents: .ValueChanged)
   }
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+
+    if let indexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+  }
+
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Player", forIndexPath: indexPath)
     cell.textLabel?.text = players[indexPath.row].name
+
+    let selectedView = UIView()
+    selectedView.backgroundColor = UIColor.darkGrayColor()
+    cell.selectedBackgroundView = selectedView
+
     return cell
   }
 

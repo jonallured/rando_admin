@@ -34,6 +34,10 @@ extension AddPickController: UITableViewDataSource {
       cell.accessoryType = team == selectedTeam ? .Checkmark : .None
     }
 
+    let selectedView = UIView()
+    selectedView.backgroundColor = UIColor.darkGrayColor()
+    cell.selectedBackgroundView = selectedView
+
     return cell
   }
 
