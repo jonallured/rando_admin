@@ -3,10 +3,11 @@ import Foundation
 class PlayerAttributes {
   var id: Int
   var name: String
+  var out: Bool
   var picks: [Pick]
 
-  init(id: Int, name: String, picks: [Pick]) {
-    (self.id, self.name, self.picks) = (id, name, picks)
+  init(id: Int, name: String, out: Bool, picks: [Pick]) {
+    (self.id, self.name, self.out, self.picks) = (id, name, out, picks)
   }
 
   class func fromJSON(json: JSON) -> [PlayerAttributes] {
@@ -16,12 +17,13 @@ class PlayerAttributes {
       guard let
         id = playerJSON["id"] as? Int,
         name = playerJSON["player_name"] as? String,
+        out = playerJSON["out"] as? Bool,
         picksJSON = playerJSON["picks"]
         else { return nil }
 
       let pickAttributes = PickAttributes.fromJSON(picksJSON)
       let picks = pickAttributes.map { Pick(weekNumber: $0.weekNumber, teamId: $0.teamId) }
-      return PlayerAttributes(id: id, name: name, picks: picks)
+      return PlayerAttributes(id: id, name: name, out: out, picks: picks)
     }
 
     return attributes.flatMap({$0})

@@ -26,7 +26,12 @@ class PlayersController: UITableViewController {
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Player", forIndexPath: indexPath)
-    cell.textLabel?.text = players[indexPath.row].name
+    let player = players[indexPath.row]
+    let attributes = [
+      NSStrikethroughStyleAttributeName: player.out
+    ]
+    let playerName = NSAttributedString(string: player.name, attributes: attributes)
+    cell.textLabel?.attributedText = playerName
 
     let selectedView = UIView()
     selectedView.backgroundColor = UIColor.darkGrayColor()
