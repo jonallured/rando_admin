@@ -26,6 +26,7 @@ class PlayerAttributesTests: XCTestCase {
     let json: [JSON] = [[
       "id": 1,
       "player_name": "Jack Allured",
+      "out": false,
       "picks": []
       ]]
 

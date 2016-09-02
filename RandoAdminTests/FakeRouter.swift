@@ -8,9 +8,9 @@ struct ApiRouter {
 
 class FakeRouter: Router {
   var playerJSON: [[String: AnyObject]] = [
-    [ "id": 1, "player_name": "Jon Allured", "picks": [] ],
-    [ "id": 2, "player_name": "Jess Allured", "picks": [] ],
-    [ "id": 3, "player_name": "Jack Allured", "picks": [] ]
+    [ "id": 1, "player_name": "Jon Allured", "out": false, "picks": [] ],
+    [ "id": 2, "player_name": "Jess Allured", "out": false, "picks": [] ],
+    [ "id": 3, "player_name": "Jack Allured", "out": false, "picks": [] ]
   ]
 
   var picksJSON = [[String: AnyObject]]()
