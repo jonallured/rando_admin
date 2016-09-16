@@ -25,16 +25,15 @@ class TeamStore {
   }
 
   private func parseJSON(json: JSON) {
-    if let teamsJSON = json as? [[String: AnyObject]] {
-      typealias TeamAttributes = (id: Int, name: String)
+    guard let teamsJSON = json as? [[String: AnyObject]] else { return }
+    typealias TeamAttributes = (id: Int, name: String)
 
-      let attributes: [TeamAttributes?] = teamsJSON.map { teamJSON in
-        guard let id = teamJSON["id"] as? Int,
-          let name = teamJSON["name"] as? String else { return nil }
-        return (id, name)
-      }
-
-      teams = attributes.flatMap({ $0 }).map { Team(id: $0.id, name: $0.name) }
+    let attributes: [TeamAttributes] = teamsJSON.flatMap { teamJSON in
+      guard let id = teamJSON["id"] as? Int,
+        let name = teamJSON["name"] as? String else { return nil }
+      return (id, name)
     }
+
+    teams = attributes.map { Team(id: $0.id, name: $0.name) }
   }
 }
