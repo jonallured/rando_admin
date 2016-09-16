@@ -34,6 +34,6 @@ class TeamStore {
       return (id, name)
     }
 
-    teams = attributes.map { Team(id: $0.id, name: $0.name) }
+    teams = attributes.map { Team(id: $0.id, name: $0.name) }.sort()
   }
 }
