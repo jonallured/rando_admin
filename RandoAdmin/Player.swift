@@ -1,6 +1,6 @@
 import Foundation
 
-class Player {
+class Player: Comparable {
   var id: Int
   var name: String
   var out: Bool
@@ -17,4 +17,12 @@ class Player {
   convenience init(_ attributes: PlayerAttributes) {
     self.init(id: attributes.id, name: attributes.name, out: attributes.out, picks: attributes.picks)
   }
+}
+
+func <(lhs: Player, rhs: Player) -> Bool {
+  return lhs.name < rhs.name
+}
+
+func ==(lhs: Player, rhs: Player) -> Bool {
+  return lhs.id == rhs.id
 }
