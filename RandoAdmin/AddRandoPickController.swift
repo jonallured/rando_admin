@@ -5,7 +5,7 @@ class AddRandoPickController: UIViewController {
 
   var rando: Rando! {
     didSet {
-      randomPick.generate(rando)
+        randomPick.generate(rando: rando)
     }
   }
 
@@ -26,11 +26,11 @@ extension AddRandoPickController: RandomPickDelegate {
   func didGenerate() {
     activityIndicator.stopAnimating()
     teamNameLabel.text = randomPick.teamName
-    teamNameLabel.hidden = false
-    saveButtonItem.enabled = true
+    teamNameLabel.isHidden = false
+    saveButtonItem.isEnabled = true
   }
 
   func didSave() {
-    dismissViewControllerAnimated(true, completion: nil)
+    dismiss(animated: true, completion: nil)
   }
 }

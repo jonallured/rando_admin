@@ -20,7 +20,7 @@ class DynamicEndpoint {
 
   var path: String? {
     if replacedParts.count == pathParts.count {
-      return "/" + replacedParts.joinWithSeparator("/")
+        return "/" + replacedParts.joined(separator: "/")
     } else {
       return nil
     }
