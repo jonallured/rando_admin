@@ -10,7 +10,7 @@ class Pick {
 
   init(weekNumber: Int, teamId: Int) {
     self.week = "Week \(weekNumber)"
-    self.team = TeamStore.withId(teamId)
+    self.team = TeamStore.withId(id: teamId)
   }
 
   convenience init(_ attributes: PickAttributes) {

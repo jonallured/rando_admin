@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0F721E1BBC598D00E7DB69 /* Team.swift */; };
 		FC36801C1BD51EF9009E318D /* DynamicEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC36801B1BD51EF9009E318D /* DynamicEndpointTests.swift */; };
-		FC3903DB1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */; };
-		FC3903DC1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */; };
 		FC3C166A1BC86EAE00B27028 /* AddRandoPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C16691BC86EAE00B27028 /* AddRandoPickController.swift */; };
 		FC3C166C1BCA8DDA00B27028 /* RandomPick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3C166B1BCA8DDA00B27028 /* RandomPick.swift */; };
 		FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */; };
@@ -23,14 +21,9 @@
 		FC8134BC1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134BB1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift */; };
 		FCB1D4221BB6E93A00F12402 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4211BB6E93A00F12402 /* Player.swift */; };
 		FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4231BB6E96900F12402 /* PlayerStore.swift */; };
-		FCB1D4261BB6ED3D00F12402 /* ProductionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */; };
-		FCB1D4281BB6ED5D00F12402 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4271BB6ED5D00F12402 /* Request.swift */; };
 		FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */; };
-		FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D42B1BB6EDBC00F12402 /* Response.swift */; };
 		FCC065DC1BCE838D00B219F4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF2B181BCE822700148568 /* Router.swift */; };
-		FCC065DD1BCE839900B219F4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D42B1BB6EDBC00F12402 /* Response.swift */; };
 		FCC065DE1BCE83A000B219F4 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */; };
-		FCC065DF1BCE83B400B219F4 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4271BB6ED5D00F12402 /* Request.swift */; };
 		FCC065E01BCE842000B219F4 /* PlayerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4231BB6E96900F12402 /* PlayerStore.swift */; };
 		FCC065E11BCE843100B219F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB1D4211BB6E93A00F12402 /* Player.swift */; };
 		FCC065E21BCE843900B219F4 /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F8F1BBCDE8A006FFEFD /* Pick.swift */; };
@@ -69,7 +62,6 @@
 /* Begin PBXFileReference section */
 		FC0F721E1BBC598D00E7DB69 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		FC36801B1BD51EF9009E318D /* DynamicEndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEndpointTests.swift; sourceTree = "<group>"; };
-		FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEndpoint.swift; sourceTree = "<group>"; };
 		FC3C16691BC86EAE00B27028 /* AddRandoPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRandoPickController.swift; sourceTree = "<group>"; };
 		FC3C166B1BCA8DDA00B27028 /* RandomPick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomPick.swift; sourceTree = "<group>"; };
 		FC4B5AC51BC7F15700893EB6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -82,10 +74,7 @@
 		FC8134BB1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegue.swift; sourceTree = "<group>"; };
 		FCB1D4211BB6E93A00F12402 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCB1D4231BB6E96900F12402 /* PlayerStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerStore.swift; sourceTree = "<group>"; };
-		FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionRouter.swift; sourceTree = "<group>"; };
-		FCB1D4271BB6ED5D00F12402 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		FCB1D42B1BB6EDBC00F12402 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		FCC065E71BCE891D00B219F4 /* PickAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickAttributesTests.swift; sourceTree = "<group>"; };
 		FCC065E91BCE8D0D00B219F4 /* PlayerAttributesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAttributesTests.swift; sourceTree = "<group>"; };
 		FCD19F311BC34721004241C1 /* PickBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickBuilder.swift; sourceTree = "<group>"; };
@@ -212,11 +201,7 @@
 		FCC065EB1BCE8F2300B219F4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				FC3903DA1BD7BE9700607E83 /* DynamicEndpoint.swift */,
 				FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */,
-				FCB1D4251BB6ED3D00F12402 /* ProductionRouter.swift */,
-				FCB1D4271BB6ED5D00F12402 /* Request.swift */,
-				FCB1D42B1BB6EDBC00F12402 /* Response.swift */,
 				FCFF2B181BCE822700148568 /* Router.swift */,
 			);
 			name = Networking;
@@ -384,7 +369,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCB1D42C1BB6EDBC00F12402 /* Response.swift in Sources */,
 				FCE82DBC1BB8467B00909C2C /* PicksController.swift in Sources */,
 				FCB1D42A1BB6ED9F00F12402 /* Endpoint.swift in Sources */,
 				FC4B5AC81BC7F97400893EB6 /* RandoPicksController.swift in Sources */,
@@ -397,15 +381,12 @@
 				FCD19F321BC34721004241C1 /* PickBuilder.swift in Sources */,
 				FCDE99321BC8390B00CC5B1C /* Rando.swift in Sources */,
 				FCDCFABE1BBC57A400A9A94F /* TeamStore.swift in Sources */,
-				FCB1D4281BB6ED5D00F12402 /* Request.swift in Sources */,
 				FCB1D4221BB6E93A00F12402 /* Player.swift in Sources */,
 				FCD19F361BC44C94004241C1 /* PlayerAttributes.swift in Sources */,
-				FCB1D4261BB6ED3D00F12402 /* ProductionRouter.swift in Sources */,
 				FCFF2B191BCE822700148568 /* Router.swift in Sources */,
 				FC3C166C1BCA8DDA00B27028 /* RandomPick.swift in Sources */,
 				FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */,
 				FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */,
-				FC3903DB1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */,
 				FCB1D4241BB6E96900F12402 /* PlayerStore.swift in Sources */,
 				FC0F721F1BBC598D00E7DB69 /* Team.swift in Sources */,
 				FC4B5AC61BC7F15700893EB6 /* TabBarController.swift in Sources */,
@@ -418,12 +399,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC065DD1BCE839900B219F4 /* Response.swift in Sources */,
 				FCC065E51BCE847700B219F4 /* PickAttributes.swift in Sources */,
 				FC36801C1BD51EF9009E318D /* DynamicEndpointTests.swift in Sources */,
-				FCC065DF1BCE83B400B219F4 /* Request.swift in Sources */,
 				FCC065E81BCE891D00B219F4 /* PickAttributesTests.swift in Sources */,
-				FC3903DC1BD7BE9700607E83 /* DynamicEndpoint.swift in Sources */,
 				FCE35FC11BADF540000590A8 /* PlayerStoreTests.swift in Sources */,
 				FCC065E01BCE842000B219F4 /* PlayerStore.swift in Sources */,
 				FCC065E11BCE843100B219F4 /* Player.swift in Sources */,
@@ -555,9 +533,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RandoAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.RandoAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -567,9 +548,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RandoAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.RandoAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -581,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.RandoAdminTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandoAdmin.app/RandoAdmin";
 			};
 			name = Debug;
@@ -593,6 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonallured.RandoAdminTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RandoAdmin.app/RandoAdmin";
 			};
 			name = Release;
