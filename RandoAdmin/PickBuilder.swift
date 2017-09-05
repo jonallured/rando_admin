@@ -6,24 +6,16 @@ protocol PickBuilderDelegate {
 
 class PickBuilder {
     var delegate: PickBuilderDelegate?
-    var router: Router
-
-    init(router: Router = ApiRouter.instance) {
-        self.router = router
-    }
 
     func create(player: Player, team: Team) {
-//        let params: Params = [
-//            "character_id": player.id,
-//            "team_id"     : team.id,
-//            "week_number" : player.nextWeekNumber
-//        ]
-//
-//        router.post(.Picks, params: params, completion: handleResponse)
+        let endpoint = Endpoint.createPick(playerId: player.id, teamId: team.id, weekNumber: player.nextWeekNumber)
+        Router.hit(endpoint, handler: handleResponse)
     }
 
-    func handleResponse(response: Response) {
-        guard response.code == 201, let json = response.json else { return }
+    private func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
+        guard let data = data,
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            else { return }
 
         let attributes = PickAttributes.fromJSON(json: json)
         let picks = attributes.map { Pick($0) }

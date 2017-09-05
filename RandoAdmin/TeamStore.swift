@@ -4,27 +4,25 @@ class TeamStore {
     static let sharedInstance = TeamStore()
 
     var teams = [Team]()
-    var router: Router
 
     class func withId(id: Int) -> Team {
         return sharedInstance.teams.filter({ $0.id == id }).first!
     }
 
-    init(router: Router = ApiRouter.instance) {
-        self.router = router
-    }
-
     func update() {
-//        router.get(.Teams, params: [:], completion: handleResponse)
+        Router.hit(Endpoint.teams, handler: handleResponse)
     }
 
-    func handleResponse(response: Response) {
-        guard response.isSuccess, let json = response.json else { return }
+    private func handleResponse(data: Data?, response: URLResponse?, error: Error?) {
+        guard let data = data,
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
+            else { return }
+
         parseJSON(json: json)
-//        NSNotificationCenter.defaultCenter().postNotificationName("TeamStoreDidUpdate", object: self, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "TeamStoreDidUpdate"), object: self)
     }
 
-    private func parseJSON(json: JSON) {
+    private func parseJSON(json: Any) {
         guard let teamsJSON = json as? [[String: AnyObject]] else { return }
         typealias TeamAttributes = (id: Int, name: String)
 

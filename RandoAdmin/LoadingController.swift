@@ -6,7 +6,8 @@ class LoadingController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //    NSNotificationCenter.defaultCenter().addObserver(self, selector: NSSelectorFromString("teamStoreUpdated"), name: "TeamStoreDidUpdate", object: TeamStore.sharedInstance)
+
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "TeamStoreDidUpdate"), object: TeamStore.sharedInstance, queue: nil, using: teamStoreUpdated)
         TeamStore.sharedInstance.update()
     }
 
@@ -16,7 +17,7 @@ class LoadingController: UIViewController {
         tabController.passStore(store: store)
     }
 
-    func teamStoreUpdated() {
+    func teamStoreUpdated(notification: Notification) {
         rando.delegate = self
         rando.update()
     }
