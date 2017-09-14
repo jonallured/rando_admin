@@ -1,9 +1,9 @@
 import Foundation
 
 enum Endpoint {
-    case activeTeams(weekNumber: String)
+    case activeTeams(weekNumber: Int)
     case createPick(playerId: Int, teamId: Int, weekNumber: Int)
-    case createRandoPick
+    case createRandoPick(teamId: Int, weekNumber: Int)
     case listRandoPicks
     case players
     case teams
@@ -13,6 +13,13 @@ enum Endpoint {
         case .createPick(let playerId, let teamId, let weekNumber):
             let params = [
                 "character_id": playerId,
+                "team_id": teamId,
+                "week_number": weekNumber
+            ]
+            let body = try? JSONSerialization.data(withJSONObject: params, options: [])
+            return body
+        case .createRandoPick(let teamId, let weekNumber):
+            let params = [
                 "team_id": teamId,
                 "week_number": weekNumber
             ]
