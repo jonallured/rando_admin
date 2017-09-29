@@ -109,16 +109,14 @@
                     <navigationItem key="navigationItem" title="Picks" id="gpw-Gt-rrn">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bsa-2K-vds">
                             <connections>
-                                <segue destination="fcO-xV-Fz6" kind="showDetail" identifier="AddPick" id="pBe-BN-aKw">
-                                    <nil key="action"/>
-                                </segue>
+                                <segue destination="fcO-xV-Fz6" kind="presentation" identifier="AddPick" id="pBe-BN-aKw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HA4-2n-1Nk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1257" y="327"/>
+            <point key="canvasLocation" x="1356" y="327"/>
         </scene>
         <!--Add Pick Controller-->
         <scene sceneID="Ugs-68-fHf">
@@ -133,10 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vod-Z4-5gy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="pD1-hA-UnX"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="tintColor" red="1" green="0.8862745098" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
@@ -146,7 +141,7 @@
                                     <navigationItem title="Add Pick" id="NQu-qk-FBc">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6cp-pS-WJ7">
                                             <connections>
-                                                <segue destination="16E-db-AaF" kind="unwind" unwindAction="unwindToPicksController:" id="vOB-mO-E22"/>
+                                                <segue destination="16E-db-AaF" kind="unwind" unwindAction="unwindToPicksControllerWithSender:" id="5ol-U8-BBI"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="i9H-j9-hEo">
@@ -184,14 +179,14 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="uh5-lS-r4b" secondAttribute="trailing" id="4i0-6x-soq"/>
                             <constraint firstItem="vod-Z4-5gy" firstAttribute="leading" secondItem="hUa-UW-AY0" secondAttribute="leading" id="8gn-h3-eQW"/>
                             <constraint firstItem="lHt-PW-H5K" firstAttribute="top" secondItem="uh5-lS-r4b" secondAttribute="bottom" id="C0u-Wi-bpu"/>
                             <constraint firstItem="uh5-lS-r4b" firstAttribute="top" secondItem="vod-Z4-5gy" secondAttribute="bottom" id="HKb-2I-UCB"/>
                             <constraint firstItem="uh5-lS-r4b" firstAttribute="leading" secondItem="hUa-UW-AY0" secondAttribute="leading" id="qVg-Rz-tgt"/>
-                            <constraint firstItem="vod-Z4-5gy" firstAttribute="top" secondItem="hUa-UW-AY0" secondAttribute="top" id="s1K-JD-Rec"/>
+                            <constraint firstItem="vod-Z4-5gy" firstAttribute="top" secondItem="hUa-UW-AY0" secondAttribute="top" constant="20" id="s1K-JD-Rec"/>
                             <constraint firstAttribute="trailing" secondItem="vod-Z4-5gy" secondAttribute="trailing" id="tfZ-zF-fJ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f6g-AW-aly"/>
@@ -203,7 +198,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjY-70-szU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="16E-db-AaF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1952" y="327"/>
+            <point key="canvasLocation" x="2161" y="327"/>
         </scene>
         <!--Players-->
         <scene sceneID="Pcn-HR-MsR">
@@ -225,7 +220,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRl-2j-SH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-133" y="327"/>
+            <point key="canvasLocation" x="-225" y="327"/>
         </scene>
     </scenes>
     <resources>
