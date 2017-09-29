@@ -1,19 +1,25 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+    private var topViewControllers: [UIViewController] {
+        let controllers = viewControllers ?? []
+        let navControllers = controllers.flatMap { $0 as? UINavigationController }
+        return navControllers.flatMap { $0.topViewController }
+    }
+
+    private var playersController: PlayersController? {
+        return topViewControllers.flatMap { $0 as? PlayersController }.first
+    }
+
+    private var randoPicksController: RandoPicksController? {
+        return topViewControllers.flatMap { $0 as? RandoPicksController }.first
+    }
+
     func passStore(store: PlayerStore) {
-        guard let navController = viewControllers?.first as? UINavigationController,
-            let playersController = navController.topViewController as? PlayersController
-            else { return }
-        
-        playersController.store = store
+        playersController?.store = store
     }
     
     func passRando(rando: Rando) {
-        guard let navController = viewControllers?.last as? UINavigationController,
-            let randoPicksController = navController.topViewController as? RandoPicksController
-            else { return }
-        
-        randoPicksController.rando = rando
+        randoPicksController?.rando = rando
     }
 }
