@@ -15,6 +15,8 @@
 		FC4B5AC81BC7F97400893EB6 /* RandoPicksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */; };
 		FC557F901BBCDE8A006FFEFD /* Pick.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F8F1BBCDE8A006FFEFD /* Pick.swift */; };
 		FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F911BBD8B9C006FFEFD /* AddPickController.swift */; };
+		FC61783F1F7EF41A008FFCCD /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC61783E1F7EF41A008FFCCD /* Players.storyboard */; };
+		FC6178411F7EF5D4008FFCCD /* Rando.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6178401F7EF5D4008FFCCD /* Rando.storyboard */; };
 		FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B41BBCA66200F95CA6 /* LoadingController.swift */; };
 		FC8134B71BBCB27800F95CA6 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */; };
 		FC8134BA1BBCB30100F95CA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B91BBCB30100F95CA6 /* UIViewController.swift */; };
@@ -68,6 +70,8 @@
 		FC4B5AC71BC7F97400893EB6 /* RandoPicksController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandoPicksController.swift; sourceTree = "<group>"; };
 		FC557F8F1BBCDE8A006FFEFD /* Pick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pick.swift; sourceTree = "<group>"; };
 		FC557F911BBD8B9C006FFEFD /* AddPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickController.swift; sourceTree = "<group>"; };
+		FC61783E1F7EF41A008FFCCD /* Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Players.storyboard; sourceTree = "<group>"; };
+		FC6178401F7EF5D4008FFCCD /* Rando.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rando.storyboard; sourceTree = "<group>"; };
 		FC8134B41BBCA66200F95CA6 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
 		FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		FC8134B91BBCB30100F95CA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 			children = (
 				FCE35FB41BADF540000590A8 /* LaunchScreen.storyboard */,
 				FCE35FAF1BADF540000590A8 /* Main.storyboard */,
+				FC61783E1F7EF41A008FFCCD /* Players.storyboard */,
+				FC6178401F7EF5D4008FFCCD /* Rando.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -350,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCE35FB61BADF540000590A8 /* LaunchScreen.storyboard in Resources */,
+				FC6178411F7EF5D4008FFCCD /* Rando.storyboard in Resources */,
+				FC61783F1F7EF41A008FFCCD /* Players.storyboard in Resources */,
 				FCE35FB31BADF540000590A8 /* Assets.xcassets in Resources */,
 				FCE35FB11BADF540000590A8 /* Main.storyboard in Resources */,
 			);

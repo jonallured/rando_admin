@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1f1-yp-mGm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Add Rando Pick Controller-->
+        <scene sceneID="ueR-pJ-DzN">
+            <objects>
+                <viewController id="I1y-NG-g1f" customClass="AddRandoPickController" customModule="RandoAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A2e-Tk-yb5"/>
+                        <viewControllerLayoutGuide type="bottom" id="3mr-zk-ph9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lL5-Al-a6u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEK-5n-8dr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Fbr-EO-Rag"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.8862745098" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="textColor" red="1" green="0.8862745098" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add Rando Pick" id="pA6-EQ-USc">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4AD-pQ-iKh">
+                                            <connections>
+                                                <segue destination="XCJ-zm-c66" kind="unwind" unwindAction="unwindToRandoPicksController:" id="eIP-bz-vAO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="save" id="0pL-fT-ynh">
+                                            <connections>
+                                                <action selector="savePressedWithSender:" destination="I1y-NG-g1f" id="RW2-pq-cVf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV9-L3-G5m">
+                                <rect key="frame" x="109.5" y="315.5" width="156" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BnV-rr-1N6">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.074509803920000006" green="0.86666666670000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VV9-L3-G5m" firstAttribute="centerX" secondItem="lL5-Al-a6u" secondAttribute="centerX" id="GJQ-Q1-595"/>
+                            <constraint firstItem="BnV-rr-1N6" firstAttribute="centerY" secondItem="lL5-Al-a6u" secondAttribute="centerY" id="MYW-4N-vRL"/>
+                            <constraint firstItem="fEK-5n-8dr" firstAttribute="top" secondItem="lL5-Al-a6u" secondAttribute="top" id="Pvu-wG-12z"/>
+                            <constraint firstItem="BnV-rr-1N6" firstAttribute="centerX" secondItem="lL5-Al-a6u" secondAttribute="centerX" id="Vi0-de-qJD"/>
+                            <constraint firstItem="VV9-L3-G5m" firstAttribute="centerY" secondItem="lL5-Al-a6u" secondAttribute="centerY" id="a0S-32-pbQ"/>
+                            <constraint firstItem="fEK-5n-8dr" firstAttribute="top" secondItem="A2e-Tk-yb5" secondAttribute="bottom" id="jNz-wi-sR4"/>
+                            <constraint firstAttribute="trailing" secondItem="fEK-5n-8dr" secondAttribute="trailing" id="uRA-dR-28F"/>
+                            <constraint firstItem="fEK-5n-8dr" firstAttribute="leading" secondItem="lL5-Al-a6u" secondAttribute="leading" id="zIV-lc-XhR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7w7-ON-Cff"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jNz-wi-sR4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BnV-rr-1N6" id="YLc-B3-GuD"/>
+                        <outlet property="saveButtonItem" destination="0pL-fT-ynh" id="5nY-cW-KSJ"/>
+                        <outlet property="teamNameLabel" destination="VV9-L3-G5m" id="bgI-1t-aKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dLi-Hz-e23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XCJ-zm-c66" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="1169"/>
+        </scene>
+        <!--Rando's Picks-->
+        <scene sceneID="UCZ-Tb-KVh">
+            <objects>
+                <tableViewController id="9vg-MM-MJ2" customClass="RandoPicksController" customModule="RandoAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fxU-Ji-WqX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Pick" textLabel="30v-N9-CWI" detailTextLabel="1ZN-Ly-LRr" style="IBUITableViewCellStyleValue1" id="adM-Vg-5d0">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adM-Vg-5d0" id="vcd-GI-5Td">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Week Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30v-N9-CWI">
+                                            <rect key="frame" x="16" y="11" width="111.5" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Team Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1ZN-Ly-LRr">
+                                            <rect key="frame" x="266.5" y="11" width="93.5" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="9vg-MM-MJ2" id="Ok6-C6-T8O"/>
+                            <outlet property="delegate" destination="9vg-MM-MJ2" id="NeS-Ka-TfH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rando's Picks" id="vIQ-Tq-KEf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nyg-Jh-gqR">
+                            <connections>
+                                <segue destination="I1y-NG-g1f" kind="showDetail" identifier="AddRandoPick" id="UqE-nk-NsO">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4MH-2C-dXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="1169"/>
+        </scene>
+        <!--Rando-->
+        <scene sceneID="8ma-2f-olL">
+            <objects>
+                <navigationController id="1f1-yp-mGm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rando" image="RandoBarItem" id="vDk-iW-I6k"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="pdj-e8-SuF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.8862745098" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="1" green="0.8862745098" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9vg-MM-MJ2" kind="relationship" relationship="rootViewController" id="o7O-3A-pGB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uiC-Kz-wxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133" y="1169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="RandoBarItem" width="30" height="30"/>
+    </resources>
+</document>
