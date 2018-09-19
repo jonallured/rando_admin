@@ -17,6 +17,8 @@
 		FC557F921BBD8B9C006FFEFD /* AddPickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC557F911BBD8B9C006FFEFD /* AddPickController.swift */; };
 		FC61783F1F7EF41A008FFCCD /* Players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC61783E1F7EF41A008FFCCD /* Players.storyboard */; };
 		FC6178411F7EF5D4008FFCCD /* Rando.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6178401F7EF5D4008FFCCD /* Rando.storyboard */; };
+		FC72EFB22152F490000480D7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72EFB12152F490000480D7 /* ApiClient.swift */; };
+		FC72EFB32152F4C8000480D7 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72EFB12152F490000480D7 /* ApiClient.swift */; };
 		FC8134B51BBCA66200F95CA6 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B41BBCA66200F95CA6 /* LoadingController.swift */; };
 		FC8134B71BBCB27800F95CA6 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */; };
 		FC8134BA1BBCB30100F95CA6 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8134B91BBCB30100F95CA6 /* UIViewController.swift */; };
@@ -72,6 +74,7 @@
 		FC557F911BBD8B9C006FFEFD /* AddPickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickController.swift; sourceTree = "<group>"; };
 		FC61783E1F7EF41A008FFCCD /* Players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Players.storyboard; sourceTree = "<group>"; };
 		FC6178401F7EF5D4008FFCCD /* Rando.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rando.storyboard; sourceTree = "<group>"; };
+		FC72EFB12152F490000480D7 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		FC8134B41BBCA66200F95CA6 /* LoadingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
 		FC8134B61BBCB27800F95CA6 /* SegueIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		FC8134B91BBCB30100F95CA6 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 		FCC065EB1BCE8F2300B219F4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				FC72EFB12152F490000480D7 /* ApiClient.swift */,
 				FCB1D4291BB6ED9F00F12402 /* Endpoint.swift */,
 				FCFF2B181BCE822700148568 /* Router.swift */,
 			);
@@ -388,6 +392,7 @@
 				FC8134BC1BBCB3AF00F95CA6 /* UIStoryboardSegue.swift in Sources */,
 				FCD19F321BC34721004241C1 /* PickBuilder.swift in Sources */,
 				FCDE99321BC8390B00CC5B1C /* Rando.swift in Sources */,
+				FC72EFB22152F490000480D7 /* ApiClient.swift in Sources */,
 				FCDCFABE1BBC57A400A9A94F /* TeamStore.swift in Sources */,
 				FCB1D4221BB6E93A00F12402 /* Player.swift in Sources */,
 				FCD19F361BC44C94004241C1 /* PlayerAttributes.swift in Sources */,
@@ -421,6 +426,7 @@
 				FCC065DE1BCE83A000B219F4 /* Endpoint.swift in Sources */,
 				FCC065E61BCE849000B219F4 /* TeamStore.swift in Sources */,
 				FCC065EA1BCE8D0D00B219F4 /* PlayerAttributesTests.swift in Sources */,
+				FC72EFB32152F4C8000480D7 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
